@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OKKY Go-To-Korea | Launch, build and grow your tech business in Korea</title>
+  <meta name="description" content="Korea market entry for AI, DevTool, Cloud, Data and SaaS companies — from remote market validation to hiring a local team and launching a Korea operation.">
+  <style>
+    :root{
+      --bg:#f7f7f4;
+      --paper:#ffffff;
+      --ink:#14171a;
+      --muted:#646b72;
+      --line:#dedfd9;
+      --accent:#ff6a2a;
+      --accent-2:#173a32;
+      --soft:#fff2eb;
+      --soft-2:#edf5f2;
+      --max:1180px;
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(247,247,244,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(222,223,217,.7);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{
+      width:34px;height:34px;border-radius:10px;background:var(--accent);
+      display:grid;place-items:center;color:white;font-size:13px;font-weight:900;
+    }
+    .brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:650}
+    .nav-links a{text-decoration:none;color:#394047}
+    .nav-cta{
+      padding:11px 16px;border-radius:999px;background:var(--ink);color:white!important;
+    }
+    .hero{padding:94px 0 72px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;
+      background:var(--soft-2);color:var(--accent-2);font-size:13px;font-weight:750;
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    h1{
+      font-size:clamp(52px,8vw,96px);line-height:.97;letter-spacing:-.055em;
+      max-width:980px;margin:24px 0 26px;
+    }
+    .hero p{
+      max-width:760px;font-size:clamp(19px,2.2vw,25px);color:#4e555c;margin:0 0 34px;
+    }
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;
+      border-radius:999px;text-decoration:none;font-weight:800;border:1px solid var(--ink);
+    }
+    .btn-primary{background:var(--ink);color:#fff}
+    .btn-secondary{background:transparent}
+    .hero-proof{
+      margin-top:58px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+    }
+    .proof{
+      background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;
+    }
+    .proof strong{display:block;font-size:31px;letter-spacing:-.03em}
+    .proof span{color:var(--muted);font-size:14px}
+    section{padding:78px 0}
+    .section-kicker{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:var(--accent)}
+    h2{font-size:clamp(36px,5vw,58px);line-height:1.06;letter-spacing:-.04em;margin:10px 0 18px;max-width:870px}
+    .lead{font-size:20px;color:var(--muted);max-width:780px;margin:0}
+    .paths{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+    .path{
+      border-radius:var(--radius);padding:34px;background:var(--paper);border:1px solid var(--line);
+      display:flex;flex-direction:column;min-height:390px;
+    }
+    .path.remote{background:#fff}
+    .path.direct{background:var(--accent-2);color:white;border-color:var(--accent-2)}
+    .path .tag{font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+    .path h3{font-size:34px;line-height:1.05;letter-spacing:-.035em;margin:16px 0 12px}
+    .path p{font-size:17px;opacity:.82;margin:0 0 22px}
+    .path ul{margin:auto 0 0;padding:0;list-style:none}
+    .path li{padding:10px 0;border-top:1px solid currentColor;opacity:.84}
+    .problem-grid,.service-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:38px
+    }
+    .card{
+      background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;
+    }
+    .card .num{font-size:12px;font-weight:850;color:var(--accent);letter-spacing:.1em}
+    .card h3{font-size:22px;line-height:1.15;letter-spacing:-.02em;margin:12px 0 10px}
+    .card p{color:var(--muted);margin:0}
+    .dark{
+      background:#111816;color:white;
+    }
+    .dark .lead{color:#b9c5c0}
+    .operation{
+      display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;margin-top:38px;align-items:start
+    }
+    .operation-note{
+      position:sticky;top:108px;background:var(--soft);color:#40251a;border-radius:22px;padding:30px;
+    }
+    .operation-note h3{font-size:29px;line-height:1.08;margin:0 0 14px}
+    .operation-note p{margin:0;color:#6d4332}
+    .stack{display:grid;gap:12px}
+    .stack-item{
+      border:1px solid #2d3935;background:#17211e;border-radius:18px;padding:24px;
+    }
+    .stack-item h3{font-size:22px;margin:0 0 8px}
+    .stack-item p{margin:0;color:#b9c5c0}
+    .roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .pill{padding:8px 10px;border-radius:999px;background:#21302b;color:#dce8e3;font-size:13px}
+    .network{
+      margin-top:38px;border:1px solid var(--line);border-radius:24px;background:var(--paper);padding:28px;
+      display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+    }
+    .node{min-height:145px;border-radius:18px;padding:20px;background:var(--bg)}
+    .node strong{display:block;font-size:19px;margin-bottom:7px}
+    .node span{color:var(--muted);font-size:14px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px}
+    .step{padding:26px;border-top:1px solid var(--ink);border-right:1px solid var(--line)}
+    .step:last-child{border-right:none}
+    .step b{font-size:12px;color:var(--accent)}
+    .step h3{font-size:24px;margin:11px 0 8px}
+    .step p{color:var(--muted);font-size:15px;margin:0}
+    .why{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start;margin-top:34px
+    }
+    .quote{
+      font-size:34px;line-height:1.14;letter-spacing:-.035em;margin:0;
+    }
+    .quote em{font-style:normal;color:var(--accent)}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .fact{padding:24px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+    .fact strong{font-size:27px;display:block}
+    .fact span{font-size:14px;color:var(--muted)}
+    .disclaimer{
+      margin-top:26px;padding:18px 20px;border-radius:14px;background:#ececea;color:#5b6064;font-size:13px
+    }
+    .final{
+      margin:76px auto 40px;border-radius:30px;background:var(--accent);color:white;padding:54px;
+    }
+    .final h2{margin-top:0;max-width:900px}
+    .final p{font-size:20px;max-width:720px;opacity:.9}
+    .final .btn{border-color:white;background:white;color:#23160f}
+    footer{padding:34px 0 54px;color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    @media (max-width:900px){
+      .nav-links a:not(.nav-cta){display:none}
+      .hero{padding-top:66px}
+      .hero-proof,.problem-grid,.service-grid{grid-template-columns:1fr}
+      .paths,.operation,.why{grid-template-columns:1fr}
+      .network{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .operation-note{position:static}
+    }
+    @media (max-width:600px){
+      .wrap{width:min(var(--max),calc(100% - 24px))}
+      h1{font-size:50px}
+      .hero-proof,.network,.facts,.process{grid-template-columns:1fr}
+      section{padding:60px 0}
+      .path{padding:26px;min-height:auto}
+      .final{padding:34px 24px;border-radius:22px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">OKKY</span>
+        <span>Go-To-Korea<small>OKKY × eBrain</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#paths">How we help</a>
+        <a href="#team">Build a team</a>
+        <a href="#network">Network</a>
+        <a href="#contact" class="nav-cta">Talk to us</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap">
+        <div class="eyebrow"><span class="dot"></span> Korea market entry for technology companies</div>
+        <h1>Launch, build and grow your tech business in Korea.</h1>
+        <p>
+          Test the market remotely — or build your Korean team and operation.
+          OKKY and eBrain connect global AI, DevTool, Cloud, Data and SaaS companies with the developers,
+          technical leaders, talent, customers, partners and specialists they need to succeed in Korea.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:info@ebrain.kr?subject=Korea%20Launch%20Inquiry">Plan your Korea launch</a>
+          <a class="btn btn-secondary" href="#paths">See the two paths</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof"><strong>180K+</strong><span>OKKY registered members</span></div>
+          <div class="proof"><strong>700K</strong><span>monthly visitors to OKKY</span></div>
+          <div class="proof"><strong>7M</strong><span>monthly page views</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section id="paths">
+      <div class="wrap">
+        <div class="section-kicker">Two ways into Korea</div>
+        <h2>Start lean. Or build locally. We support both.</h2>
+        <p class="lead">
+          Some companies want evidence before committing people and capital. Others already know Korea matters
+          and want to establish a real local presence. We help you choose — and move between — both paths.
+        </p>
+        <div class="paths">
+          <article class="path remote">
+            <div class="tag">Path 01 · Explore Korea</div>
+            <h3>Enter the market without hiring a local team.</h3>
+            <p>
+              Use OKKY as your local market-entry operator to validate demand, sharpen positioning and build early traction
+              before committing to an entity or full-time team.
+            </p>
+            <ul>
+              <li>Korean market and competitor signal</li>
+              <li>Positioning and local messaging</li>
+              <li>Developer community campaigns and content</li>
+              <li>Webinars, product trials and user feedback</li>
+              <li>Early customer and partner discovery</li>
+            </ul>
+          </article>
+          <article class="path direct">
+            <div class="tag">Path 02 · Build in Korea</div>
+            <h3>Build your Korean team and launch a local operation.</h3>
+            <p>
+              When Korea is a strategic market, we help you assemble the people, relationships and specialist support
+              needed to operate locally — not just register a company.
+            </p>
+            <ul>
+              <li>Country Manager and first-team hiring</li>
+              <li>Developer Relations and technical talent</li>
+              <li>Enterprise customer and partner introductions</li>
+              <li>Legal, tax, accounting, labor and visa specialist coordination</li>
+              <li>Launch, community and market-development support</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">Why Korea is different</div>
+        <h2>Market entry is not a translation project.</h2>
+        <p class="lead">The hard part is building trust, finding the right people and learning how decisions are actually made.</p>
+        <div class="problem-grid">
+          <div class="card">
+            <div class="num">01</div>
+            <h3>The first hire matters disproportionately.</h3>
+            <p>A strong first local leader or technical hire can compress years of trial and error. The wrong one can isolate headquarters from the market.</p>
+          </div>
+          <div class="card">
+            <div class="num">02</div>
+            <h3>Developer trust is earned inside the ecosystem.</h3>
+            <p>For technical products, awareness is not enough. Engineers need credible local voices, useful content, peers and real product experience.</p>
+          </div>
+          <div class="card">
+            <div class="num">03</div>
+            <h3>Relationships unlock customers and partners.</h3>
+            <p>Enterprise buyers, implementation partners and technical leaders often move through trusted networks long before a formal procurement process begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="team">
+      <div class="wrap">
+        <div class="section-kicker">Establish your Korea operation</div>
+        <h2>Build the people and relationships behind a real local business.</h2>
+        <p class="lead">
+          We are not a company-registration agency. We are a technology-market operator that helps you build the human and ecosystem layer around your Korea launch.
+        </p>
+        <div class="operation">
+          <aside class="operation-note">
+            <h3>We know the people who make Korea’s tech market move.</h3>
+            <p>
+              Our advantage is not paperwork. It is access to developers, technical leaders, recruiters, founders,
+              enterprise teams, partners and domain specialists — and the ability to bring the right ones together around your launch.
+            </p>
+          </aside>
+          <div class="stack">
+            <div class="stack-item">
+              <h3>1. Build your first local team</h3>
+              <p>Define the first roles, localize the profile, source and assess candidates, and help headquarters understand Korean hiring realities.</p>
+              <div class="roles">
+                <span class="pill">Country Manager</span>
+                <span class="pill">Developer Relations</span>
+                <span class="pill">Solutions Engineer</span>
+                <span class="pill">Solutions Architect</span>
+                <span class="pill">Enterprise Sales</span>
+                <span class="pill">Technical Marketing</span>
+              </div>
+            </div>
+            <div class="stack-item">
+              <h3>2. Coordinate trusted professional specialists</h3>
+              <p>
+                When incorporation, tax, accounting, labor, immigration or legal work is required, we connect you with qualified Korean specialists
+                and help coordinate the work around your operating plan.
+              </p>
+            </div>
+            <div class="stack-item">
+              <h3>3. Open the right doors</h3>
+              <p>
+                We help you meet the local CTOs, developers, founders, enterprise technology teams, resellers,
+                SI/MSP partners, educators and community leaders relevant to your category.
+              </p>
+            </div>
+            <div class="stack-item">
+              <h3>4. Launch with traction, not just an address</h3>
+              <p>
+                Build developer awareness, recruit early users, identify initial customers, create local references and keep the market-learning loop running after launch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="network">
+      <div class="wrap">
+        <div class="section-kicker">Your Korea tech ecosystem</div>
+        <h2>One partner. Multiple local networks.</h2>
+        <p class="lead">We help you navigate the ecosystem as one connected operating problem instead of a series of disconnected vendors.</p>
+        <div class="network">
+          <div class="node"><strong>Developers & AI talent</strong><span>Product users, engineers, candidates, advocates and technical contributors.</span></div>
+          <div class="node"><strong>CTOs & technical leaders</strong><span>Senior practitioners who influence architecture, tooling and technology adoption.</span></div>
+          <div class="node"><strong>Enterprise buyers</strong><span>Technology teams looking for AI, cloud, data, developer productivity and infrastructure solutions.</span></div>
+          <div class="node"><strong>Partners & channels</strong><span>SI, MSP, cloud, implementation, reseller and ecosystem partners.</span></div>
+          <div class="node"><strong>Founders & operators</strong><span>Korean startup and scale-up leaders who understand local execution.</span></div>
+          <div class="node"><strong>Tech communities</strong><span>Communities, meetups, conferences and domain-specific practitioner groups.</span></div>
+          <div class="node"><strong>Recruiting & HR</strong><span>Tech-specialized search, candidate networks and local hiring intelligence through eBrain.</span></div>
+          <div class="node"><strong>Professional specialists</strong><span>Independent legal, tax, accounting, labor and immigration professionals when needed.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">How we work</div>
+        <h2>Explore → Launch → Establish → Scale.</h2>
+        <p class="lead">You can start at the stage that matches your current commitment to Korea.</p>
+        <div class="process">
+          <div class="step"><b>01 · EXPLORE</b><h3>Find the signal</h3><p>Market fit, category dynamics, messaging, target users and potential early customers.</p></div>
+          <div class="step"><b>02 · LAUNCH</b><h3>Create traction</h3><p>Developer campaigns, webinars, trials, content, introductions and initial market references.</p></div>
+          <div class="step"><b>03 · ESTABLISH</b><h3>Build locally</h3><p>First-team hiring, specialist coordination, partner mapping and operating setup.</p></div>
+          <div class="step"><b>04 · SCALE</b><h3>Grow the network</h3><p>Ongoing community, hiring, enterprise pipeline, partnerships and market intelligence.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">Why OKKY × eBrain</div>
+        <h2>A developer community and a tech-talent company, working as one Korea launch partner.</h2>
+        <div class="why">
+          <p class="quote">
+            “The difference is not that we can introduce Korea. <em>We are already inside Korea’s developer and tech-talent ecosystem.</em>”
+          </p>
+          <div class="facts">
+            <div class="fact"><strong>Since 2000</strong><span>OKKY’s developer community heritage</span></div>
+            <div class="fact"><strong>180K+</strong><span>registered OKKY members</span></div>
+            <div class="fact"><strong>Since 2011</strong><span>eBrain’s tech-talent business</span></div>
+            <div class="fact"><strong>Tech + Talent</strong><span>community, recruiting, market access and local execution</span></div>
+          </div>
+        </div>
+        <div class="disclaimer">
+          OKKY and eBrain do not provide legal, tax, accounting or immigration advice. Where regulated or specialist professional services are required,
+          we introduce and coordinate with appropriately qualified independent professionals. Engagement terms for those services are agreed separately.
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap final">
+      <div class="section-kicker" style="color:white;opacity:.8">Start with a Korea entry conversation</div>
+      <h2>Not sure whether to test Korea remotely or build a local operation?</h2>
+      <p>
+        Tell us what you sell, who your target users are and how committed you are to Korea.
+        We will help frame the right entry path — from first signal to first local team.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:info@ebrain.kr?subject=OKKY%20Go-To-Korea%20Inquiry&body=Company%3A%0AProduct%3A%0ATarget%20customer%3A%0AWhat%20we%20want%20to%20achieve%20in%20Korea%3A">Start a Korea launch conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>OKKY Go-To-Korea · operated with eBrain · Seoul, Korea</div>
+      <div class="footer-links">
+        <a href="https://okky.kr/" target="_blank" rel="noreferrer">OKKY</a>
+        <a href="https://ebrain.kr/" target="_blank" rel="noreferrer">eBrain</a>
+        <a href="mailto:info@ebrain.kr">info@ebrain.kr</a>
+      </div>
+      <div style="width:100%">OKKY traffic and membership figures reflect publicly stated OKKY company information.</div>
+    </div>
+  </footer>
+</body>
+</html>
