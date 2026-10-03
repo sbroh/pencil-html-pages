@@ -96,10 +96,21 @@
       margin-bottom:22px;
     }
     .eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--blue-500)}
-    h1{
+    .hero-name{
       margin:0;
-      font-size:clamp(48px,6vw,76px);
-      line-height:1.05;letter-spacing:-.048em;font-weight:800;
+      font-size:clamp(72px,10vw,128px);
+      line-height:.9;
+      letter-spacing:-.065em;
+      font-weight:850;
+      color:var(--grey-900);
+      white-space:nowrap;
+    }
+    .hero-tagline{
+      margin:24px 0 0;
+      font-size:clamp(34px,4.4vw,56px);
+      line-height:1.12;
+      letter-spacing:-.042em;
+      font-weight:800;
       max-width:760px;
     }
     .hero .subtitle{
@@ -297,6 +308,32 @@
       color:var(--grey-600);font-size:13px;line-height:1.6;
     }
 
+    .partner-strip{
+      margin-top:22px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .partner-badge{
+      flex:1 1 240px;
+      padding:16px 18px;
+      border-radius:14px;
+      background:var(--grey-50);
+      border:1px solid var(--grey-200);
+    }
+    .partner-badge strong{
+      display:block;
+      font-size:14px;
+      color:var(--grey-800);
+      margin-bottom:4px;
+    }
+    .partner-badge span{
+      display:block;
+      font-size:13px;
+      color:var(--grey-500);
+      line-height:1.5;
+    }
+
     /* CTA */
     .cta-section{padding-top:36px}
     .cta-panel{
@@ -351,7 +388,8 @@
       .nav-inner{height:64px}
       .brand-copy span{display:none}
       .nav-links .cta{padding:9px 12px}
-      h1{font-size:43px}
+      .hero-name{font-size:56px;white-space:normal}
+      .hero-tagline{font-size:34px}
       .hero .subtitle{font-size:18px}
       .hero-stats{gap:20px}
       .hero-visual{min-height:350px}
@@ -371,7 +409,7 @@
         <span class="brand-badge">OKKY</span>
         <span class="brand-copy">
           <strong>Go-To-Korea</strong>
-          <span>OKKY × eBrain</span>
+          <span>by OKKY</span>
         </span>
       </a>
       <div class="nav-links">
@@ -387,12 +425,13 @@
     <header class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span class="eyebrow-dot"></span>Korea market entry for technology companies</div>
-          <h1>Build your tech business in Korea, the right way.</h1>
+          <div class="eyebrow"><span class="eyebrow-dot"></span>OKKY presents</div>
+          <div class="hero-name">Go-To-Korea</div>
+          <div class="hero-tagline">Build your tech business in Korea, the right way.</div>
           <p class="subtitle">
             Test the market remotely — or build your Korean team and operation.
-            OKKY and eBrain connect global AI, DevTool, Cloud, Data and SaaS companies with the people, customers,
-            partners and specialists they need to succeed in Korea.
+            OKKY connects global AI, DevTool, Cloud, Data and SaaS companies with Korea’s developers, technical leaders,
+            talent, customers, partners and trusted specialists.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="mailto:info@ebrain.kr?subject=Korea%20Launch%20Inquiry">Plan your Korea launch <span class="arrow">→</span></a>
@@ -596,8 +635,8 @@
 
     <section>
       <div class="container">
-        <div class="section-label">Why OKKY × eBrain</div>
-        <h2>A developer community and a tech-talent company, working as one Korea launch partner.</h2>
+        <div class="section-label">Why OKKY</div>
+        <h2>Korea’s developer community, market access and trusted partner network — in one launch platform.</h2>
 
         <div class="why-grid">
           <div class="quote-card">
@@ -608,12 +647,22 @@
             <div class="fact-grid">
               <div class="fact"><strong>Since 2000</strong><span>OKKY’s developer community heritage</span></div>
               <div class="fact"><strong>180K+</strong><span>registered OKKY members</span></div>
-              <div class="fact"><strong>Since 2011</strong><span>eBrain’s tech-talent business</span></div>
-              <div class="fact"><strong>Tech + Talent</strong><span>community, recruiting, market access and execution</span></div>
+              <div class="fact"><strong>Tech + Talent</strong><span>community, recruiting access and local execution</span></div>
+              <div class="fact"><strong>Partner Network</strong><span>specialists across hiring, legal, tax, accounting and labor</span></div>
+            </div>
+            <div class="partner-strip">
+              <div class="partner-badge">
+                <strong>Talent & Recruiting Partner · eBrain</strong>
+                <span>Supports OKKY with technology talent search, recruiting and local hiring intelligence.</span>
+              </div>
+              <div class="partner-badge">
+                <strong>Professional Specialist Network</strong>
+                <span>Independent legal, tax, accounting, labor and immigration professionals engaged when required.</span>
+              </div>
             </div>
             <div class="disclaimer">
-              OKKY and eBrain do not provide legal, tax, accounting or immigration advice. Where regulated or specialist professional services are required,
-              we introduce and coordinate with appropriately qualified independent professionals. Engagement terms for those services are agreed separately.
+              OKKY leads the Go-To-Korea service. OKKY does not itself provide legal, tax, accounting or immigration advice.
+              Where regulated or specialist professional services are required, OKKY coordinates with appropriately qualified independent professionals.
             </div>
           </div>
         </div>
@@ -634,11 +683,11 @@
 
   <footer>
     <div class="container footer-row">
-      <div>OKKY Go-To-Korea · operated with eBrain · Seoul, Korea</div>
+      <div>OKKY Go-To-Korea · Seoul, Korea</div>
       <div class="footer-links">
         <a href="https://okky.kr/" target="_blank" rel="noreferrer">OKKY</a>
-        <a href="https://ebrain.kr/" target="_blank" rel="noreferrer">eBrain</a>
-        <a href="mailto:info@ebrain.kr">info@ebrain.kr</a>
+        <a href="https://ebrain.kr/" target="_blank" rel="noreferrer">Talent Partner · eBrain</a>
+        <a href="mailto:info@ebrain.kr">Contact</a>
       </div>
       <div class="footer-note">OKKY traffic and membership figures reflect publicly stated OKKY company information.</div>
     </div>
